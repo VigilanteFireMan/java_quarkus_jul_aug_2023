@@ -1,10 +1,10 @@
-``` java
-course(instructor -> 
-      instructor.name("Prabhu Sunderaraman")
-            .email("prabhu.bits@gmail.com")
-            .blog("http://healthycoder.in")
-            .books("Spring 3.0 Black Book", "Practical Ext JS 4")
-    );
+``` groovy
+course {
+	String instructor = 'Prabhu Sunderaraman'
+	String email = 'prabhu.bits@gmail.com'
+	String blog = 'http://healthycoder.in'
+	def String[] books = ['Spring 3.0 Black Book', 'Practical Ext JS 4']
+}
 ```    
 
 ### Topics (*Not in the same order*)
