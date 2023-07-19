@@ -1,5 +1,7 @@
 package com.herbalife.labs.lab02;
 
+import java.util.stream.IntStream;
+
 public class Lab02 {
     public static void main(String[] args) {
         calculateSumOfOddNumbersBetween1To10001();
@@ -11,10 +13,23 @@ public class Lab02 {
         String input = "+5 -1 +9 +5 -67 +5 -3 +2 -4 +6 +8 -13 +2 -4 +6 +18 -3 +2 -4 +6 +88 +15 -1 +9 +5 -67 +45 -3 +2 -4 +36 +8 -13 +2 -4 +6 +18 -3 +2 -74 +11 +109";
         String items[] = input.split(" ");
         int sum = 0;
-        for (String item: items) {
+        for (String item : items) {
             sum += Integer.parseInt(item);
         }
         System.out.println("Sum is %d".formatted(sum));
+    }
+
+    private static void calculateIntegerAverageOfAllNumbersFrom1To10001InModernStyle() {
+        //You'll learn it in a day or two
+        int sum = IntStream
+                .range(1, 10001)
+                .sum();
+        int[] exclusionList = {10, 19, 21, 39, 309, 431, 643, 942, 1209, 7981, 8888, 9910};
+        for (int number : exclusionList) {
+            sum -= number;
+        }
+        int average = (int) (sum / (10001 - exclusionList.length));
+        System.out.println("Average is %d".formatted(average));
     }
 
     private static void calculateIntegerAverageOfAllNumbersFrom1To10001() {
@@ -23,10 +38,10 @@ public class Lab02 {
             sum += i;
         }
         int[] exclusionList = {10, 19, 21, 39, 309, 431, 643, 942, 1209, 7981, 8888, 9910};
-        for (int number: exclusionList) {
+        for (int number : exclusionList) {
             sum -= number;
         }
-        int average = (int)(sum/(10001 - exclusionList.length));
+        int average = (int) (sum / (10001 - exclusionList.length));
         System.out.println("Average is %d".formatted(average));
     }
 
