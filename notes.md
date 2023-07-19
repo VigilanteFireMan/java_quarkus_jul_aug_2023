@@ -19,4 +19,10 @@
 
 ### Basic constructs
 
-* 
+* Data types; Primitive and Reference types
+* Primitive types are stored on the stack; Reference types are stored on the heap
+* Wrapper classes- Integer, Boolean, Double etc for boxing
+* String and StringBuilder
+* Strings are immutable; Use StringBuilder if you want to manipulate strings
+* Use .equals for comparison of string values; multiline strings(""" """); formatted for concatenation
+* Array syntax - square brackets positioned  after the datatype or variable  
