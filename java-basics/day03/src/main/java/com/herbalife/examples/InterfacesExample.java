@@ -12,6 +12,8 @@ public class InterfacesExample {
     }
 }
 
+interface InkjetPrinter extends Printer {}
+
 interface Printer {
     void print(String data);
     default void printInUpperCase(String data) {
