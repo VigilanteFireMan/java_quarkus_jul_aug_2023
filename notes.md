@@ -26,3 +26,26 @@
 * Strings are immutable; Use StringBuilder if you want to manipulate strings
 * Use .equals for comparison of string values; multiline strings(""" """); formatted for concatenation
 * Array syntax - square brackets positioned  after the datatype or variable  
+
+### Interfaces
+
+* Interfaces in Java can contain variables (implicitly public, static and final)
+* Is used to define constants
+* Interfaces contain abstract methods, **default** methods, static methods
+* Use **implements** keyword to implement an interface
+* Convention is to define an interface implementation class with the **impl** suffix
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
