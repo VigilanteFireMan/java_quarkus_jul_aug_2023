@@ -25,10 +25,11 @@ public class BuiltInFunctionalInterfaces1 {
         boolean result = isOdd
                 .and(greaterThan10)
                 .test(input);
-        //Check if a given number is odd or greater than 10 or less than 0
+        //Check if a given number is NOT (odd or greater than 10 or less than 0)
         boolean result2 = isOdd
                 .or(greaterThan10)
                 .or(lessThan0)
+                .negate()
                 .test(input);
 
     }
