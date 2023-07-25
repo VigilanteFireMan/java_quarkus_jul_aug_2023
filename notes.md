@@ -35,6 +35,17 @@
 * Use **implements** keyword to implement an interface
 * Convention is to define an interface implementation class with the **impl** suffix
 
+### Functional Interfaces
+
+* An interface with just ONE abstract method; can have multiple default methods, static methods
+* You can implement an interface in 3 ways
+* Create a separate Impl class that implements the interface
+* Create an Anonymous inner class that implements the interface - Compiler generates a **ParentClassName$1.class**, **ParentClassName$2.class** ...etc
+* If you have a functional interface, implement it using a Lambda expression
+* Syntax for lambda **arguments -> implementation**
+* You can pass lambdas as arguments to other functions; similar to passing a block of code as argument
+* Built-in functional interfaces; **java.util.function** package contains functional interfaces
+* Predicate, Function, Supplier, Consumer
 
 
 
