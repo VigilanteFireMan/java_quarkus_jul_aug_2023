@@ -13,6 +13,7 @@ public class BasicsOfStreamAPI {
         //Streams cannot be reused
         //Streams are lazily evaluated. They are evaluated only when the terminal condition is met
         //The methods in Stream API have code addressing ONE item in a collection; The looping is taken up by the internal implementation
+        //READ ONLY
         List<String> languages = Arrays.asList("Java", "Haskell", "Rust", "Golang", "Scala");
         Stream<String> langStream = languages.stream();
         langStream
