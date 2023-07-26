@@ -47,10 +47,11 @@ public class Lab09 {
     private static String convertPlacesToJson(String countryName, List<String> lineItems) {
         String citiesInJson = lineItems
                 .stream()
-                .map(line -> cityJson.formatted(line.split(",")[0], line.split(",")[2]))
+                .map(line -> cityJson.formatted(line.split(",")[0], line.split(",")[2]).strip())
                 .collect(Collectors.joining(","));
-        countryJson.formatted(countryName, citiesInJson);
-        return countryJson;
+
+        return countryJson.formatted(countryName, citiesInJson).strip();
+        //return countryJson;
     }
 
     private static void generatePlacesJson() throws IOException {
