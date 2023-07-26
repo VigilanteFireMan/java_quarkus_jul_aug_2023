@@ -48,7 +48,16 @@
 * Predicate, Function, Supplier, Consumer
 
 
+### Streams
 
+* Stream is an abstraction to collections
+* Introduced in Java 1.8
+* Create a stream using **.stream()** method
+* Streams cannot be reused
+* Streams process items **sequentially** by default
+* Streams are read only; You cannot modify the underlying collection using streams
+* Streams are lazily evaluated. Evaluated only when the terminal condition is met. get(), forEach(), collect()
+* filter, map, reduce, collect
 
 
 
