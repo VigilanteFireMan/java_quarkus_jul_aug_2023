@@ -3,7 +3,7 @@
 * You can use **Files & Paths** class and its methods for File IO
 
 
-### Implement the following in Lab11.java using Stream API
+### Implement the following in Lab09.java using Stream API
 
 
 * Extract and store all the distinct city names alone in a separate file called **cities.txt**
