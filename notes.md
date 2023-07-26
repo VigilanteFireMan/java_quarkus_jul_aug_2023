@@ -60,7 +60,33 @@
 * filter, map, reduce, collect
 
 
+```
+####JAVASCRIPT
 
+*****Inside filter JavaScript
+*****Inside filter Java
+*****Inside filter Scala
+*****Inside filter Ruby
+=====Inside map JavaScript
+=====Inside map Java
+JAVASCRIPT
+JAVA
+
+
+
+#### JAVA STREAMS
+
+
+*****Inside filter JavaScript
+=====Inside map JavaScript
+JAVASCRIPT
+*****Inside filter Java
+=====Inside map Java
+JAVA
+*****Inside filter Scala
+*****Inside filter Ruby
+
+```
 
 
 
