@@ -88,6 +88,8 @@ JAVA
 
 ```
 
+* Stream processes every item in a collection, passes it through all the stages till the terminal condition, then picks up the next item.
+* **Optional** type introduced in Java 1.7 is like a box which may or may not have data. The caller needs to check if the value is present or is empty and **get()** the value
 
 
 
