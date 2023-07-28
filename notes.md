@@ -92,6 +92,52 @@ JAVA
 * **Optional** type introduced in Java 1.7 is like a box which may or may not have data. The caller needs to check if the value is present or is empty and **get()** the value
 
 
+### Gradle
+
+* Groovy script; manage dependencies
+* run gradle build file by specifying different tasks like clean, compile, jar
+* A java application can be packaged into a jar file. **java archive**. It's compatible with winzip format
+* jar files can be run using (provided you specify a manifest and configure the Main class)
+
+```
+java -jar <jarFileName>
+```
+
+* Modern day applications(or services or api) are bundled as jars and containerized, and kubernetized and deployed in VMs on the cloud
+
+
+### Concurrency
+
+* **Thread** is the single line of execution
+* Instantiate a Thread class and pass a Runnable instance. Runnable is a functional interface.
+* Call **.start()** to start the thread
+* java.util.concurrent package provides you with several entities to work with threads
+* You can create thread pools using the Executor. fixed thread pool, growable thread pool, ForkJoinPool
+* Create a thread pool and submit the activity(Runnable interfaces) to the thread pool
+* Number of threads you create depends on number of cores, CPU/IO intensive operations
+* **number of threads = number of cores / (1 - blockingfactor)**
+* Parallel streams use forkjoin pool. and it uses **number of cores - 1** threads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

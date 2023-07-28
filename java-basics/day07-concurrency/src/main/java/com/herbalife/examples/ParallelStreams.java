@@ -1,6 +1,7 @@
 package com.herbalife.examples;
 
 import java.util.List;
+import java.util.concurrent.ForkJoinPool;
 import java.util.stream.IntStream;
 
 public class ParallelStreams {
@@ -10,5 +11,6 @@ public class ParallelStreams {
                 .parallel() //by default creates a forkjoinpool with number of threads = (number of cores - 1)
                 .filter(e -> e % 2 == 0)
                 .forEach(e -> System.out.println(e + " on " + MyThreadUtil.name()));
+
     }
 }
