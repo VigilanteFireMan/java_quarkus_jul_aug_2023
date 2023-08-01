@@ -118,6 +118,24 @@ java -jar <jarFileName>
 * **number of threads = number of cores / (1 - blockingfactor)**
 * Parallel streams use forkjoin pool. and it uses **number of cores - 1** threads
 
+### Jdbc
+
+* **java.sql** package
+* Load the driver, Create a connection, create a statement, execute the sql query, process resultsets.
+* Handle exceptions
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
