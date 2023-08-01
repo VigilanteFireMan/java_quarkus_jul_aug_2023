@@ -19,11 +19,11 @@ public class MoreJdbc {
     public static void main(String[] args) throws SQLException {
         //insertPersonUsingStatement("Jane", "Doe", 12);
         //insertPersonUsingPreparedStatement("Ram", "Narain", 32);
-        List<Person> persons = loadAllPersons();
+        List<Person> persons = loadAllPersonsUsingPreparedStatement();
         persons.forEach(System.out::println);
 
-        System.out.println("**********Executing stored proc");
-        printAllPersonsWithAgeGtUsingAStoredProcedure(35);
+        //System.out.println("**********Executing stored proc");
+        //printAllPersonsWithAgeGtUsingAStoredProcedure(35);
     }
 
     private static void printAllPersonsWithAgeGtUsingAStoredProcedure(int age) throws SQLException {
@@ -52,6 +52,34 @@ public class MoreJdbc {
         }
     }
 
+    private static List<Person> loadAllPersonsUsingPreparedStatement() throws SQLException {
+        List<Person> persons = new ArrayList<>();
+        Connection connection = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver"); //Type.GetType("");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/training", "root", "root");
+
+            String sql = "select * from persons where first_name = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, "Joe");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            //ResultSet is active as long as the connection is open
+            while(resultSet.next()) {
+                Person person = new Person(resultSet.getInt("id"),
+                        resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getInt("age"));
+                persons.add(person);
+            }
+            resultSet.close();
+            preparedStatement.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connection.close();
+        }
+        return persons;
+    }
 
     private static List<Person> loadAllPersons() throws SQLException {
         List<Person> persons = new ArrayList<>();
