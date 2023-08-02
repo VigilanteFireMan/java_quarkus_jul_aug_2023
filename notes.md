@@ -125,9 +125,36 @@ java -jar <jarFileName>
 * Handle exceptions
 
 
+### Java Enterprise Edition
+
+* Web applications, Messaging applications, Security, GraphQL
+* JDK -> Java (Standard Edition) Development Kit
+* JEE  SDK->  Jakarta Enterprise Edition Software Development Kit
+* JEE is a specification; a set of rules that you need to follow
+*  There are several implementations of JEE specification
+* ORM -> Hibernate, MyBatis, Panache
+* REST api -> Rest easy, Jersey, Spring MVC,
+
+* **Spring Boot** is a framework that has several implementations of JEE specifications under its hood
+* **Quarkus** is a framework that has several implementations of JEE specifications under its hood
+* **Micronaut** is a framework that has several implementations of JEE specifications under its hood
+
+### Quarkus
+
+* It's compliant with the MicroProfile standard for building microservices
+* Cloud native - provides facilities to seamlessly deploy the applications in k8s
+* Quarkus applications are more performant than Spring boot; (Their boot-up time is faster than other Java applications); Why?
+* **GraalVM** -> Converts your bytecodes to native executables; Starting time is faster than a traditional Java application that runs on a JVM
+* Quarkus framework comes with built-in features to work on GraalVM seamlessly
 
 
+* **quarkus-run.jar** is called a **fast** jar. You have to copy the entire **quarkus-app** and deploy wherever you want and run quarkus-run.jar file
 
+#### Commands
+
+```
+./gradlew quarkusDev
+```
 
 
 
