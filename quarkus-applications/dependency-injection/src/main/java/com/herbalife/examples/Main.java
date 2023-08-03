@@ -32,6 +32,9 @@ public class Main implements QuarkusApplication {
     @Inject
     NutritionServiceUtil nutritionServiceUtil;
 
+    @Inject
+    TransportCompany transportCompany;
+
     @Override
     public int run(String... args) throws Exception {
 //        System.out.println("This is the starting point!");
@@ -46,8 +49,10 @@ public class Main implements QuarkusApplication {
 //        System.out.println(door.getAlarm());
 //        System.out.println(company);
 //        System.out.println(nutritionService.getUrl() + " " + nutritionService.getUsername() + " " + nutritionService.getPassword() + " " + nutritionService.getAppId());
-        System.out.println(nutritionServiceUtil.url() + " " + nutritionServiceUtil.username() + " " + nutritionServiceUtil.password() + " " + nutritionServiceUtil.appId());
-        System.out.println(nutritionServiceUtil.vendor());
+//        System.out.println(nutritionServiceUtil.url() + " " + nutritionServiceUtil.username() + " " + nutritionServiceUtil.password() + " " + nutritionServiceUtil.appId());
+//        System.out.println(nutritionServiceUtil.vendor());
+        System.out.println(transportCompany.truck1);
+        System.out.println(transportCompany.truck2);
         return 0;
     }
 }
