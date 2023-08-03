@@ -157,9 +157,15 @@ java -jar <jarFileName>
 ```
 
 
+### Dependency Injection
 
+* Fundamental principle on which most modern frameworks like spring boot, quarkus, micronaut are designed
+* DI is a mechanism by which you avoid writing unneccessary creation and lookup code
+* Your application should just have POJOs(Plain Ordinary Java Objects)
+* The underlying framework acts as a container and creates objects for you.
 
-
+* Field-based Injection, Constructor-based injection
+* Define a class; Mark the scope using Singleton, Request-scoped, Session-scoped, Application-scoped; Inject the class whereever you want in the application
 
 
 
